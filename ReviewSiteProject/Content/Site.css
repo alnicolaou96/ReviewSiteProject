@@ -3,6 +3,7 @@
     background-repeat:no-repeat;
     background-size:cover;
     background-color:rgba(0, 232, 104,0.25);
+    min-width:500px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -35,6 +36,11 @@ textarea {
     grid-column:span 15;
     background-color:rgb(0, 232, 104);
 }
+    #nav h1 {
+        font-family: 'Gaegu', cursive;
+        margin-left:10px;
+        margin-bottom:0px;
+    }
     #nav ul {
         list-style: none;
         display: flex;    
@@ -58,7 +64,18 @@ textarea {
                 color:rgb(73, 49, 0);
                 background-color:rgb(242, 186, 71)
             }
-                #name {
-                    grid-column: span 15;
+                #description{
+                    grid-column:2/span 13;
+                    grid-row:span 4;
+                    background-color:rgba(0, 232, 104,0.25);
+                    border-radius:10px;
+                    display:flex;
+                    align-items:center;
+                    flex-flow:column;
+                    justify-content:center;
+                    color:rgb(1, 31, 15);
+                }
+                #description h3{
+                    text-align:center;
                 }
 
