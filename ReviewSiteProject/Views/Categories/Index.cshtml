@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ReviewSiteProject.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            @Html.DisplayNameFor(model => model.Brand)
+        </div>
+    </div>
+</div>
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col">
+                @Html.DisplayFor(modelItem => item.Brand)
+            </div>
+            <div class="col">
+                @Html.ActionLink("Edit", "Edit", new { id = item.CategoryID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CategoryID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CategoryID })
+            </div>
+        </div>
+    }
+    </div>
+
