@@ -4,34 +4,32 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="create">Reviews</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p class="create">
+    @Html.ActionLink("Write A Review", "Create")
 </p>
 
-<div class="container">
-    <div class="row">
-        <div class="col">@Html.DisplayNameFor(model => model.Category.Brand)</div>
-        <div class="col">@Html.DisplayNameFor(model => model.Title)</div>
-        <div class="col">@Html.DisplayNameFor(model => model.Content)</div>
-        <div class="col">@Html.DisplayNameFor(model => model.PublishDate)</div>
+<div class="con shared">
+        <div class="column fixedcol">@Html.DisplayNameFor(model => model.Category.Brand)</div>
+        <div class="column fixedcol">@Html.DisplayNameFor(model => model.Title)</div>
+        <div class="column fixedcol">@Html.DisplayNameFor(model => model.Content)</div>
+        <div class="column fixedcol">@Html.DisplayNameFor(model => model.PublishDate)</div>
+        <div class="column fixedcol"></div>
     </div>
-</div>
-<div class="container">
+<div class="conTwo shared">
+
     @foreach (var item in Model)
     {
-    <div class="row">
-        <div class="col">@Html.DisplayFor(modelItem => item.Category.Brand)</div>
-        <div class="col">@Html.DisplayFor(modelItem => item.Title)</div>
-        <div class="col">@Html.DisplayFor(modelItem => item.Content)</div>
-        <div class="col">@Html.DisplayFor(modelItem => item.PublishDate)</div>
-        <div class="col">
+        <div class="column">@Html.DisplayFor(modelItem => item.Category.Brand)</div>
+        <div class="column">@Html.DisplayFor(modelItem => item.Title)</div>
+        <div class="column">@Html.DisplayFor(modelItem => item.Content)</div>
+        <div class="column">@Html.DisplayFor(modelItem => item.PublishDate)</div>
+        <div class="column">
             @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
             @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
         </div>
-    </div>
     }
     </div>
 

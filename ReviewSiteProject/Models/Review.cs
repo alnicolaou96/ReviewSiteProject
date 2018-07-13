@@ -11,8 +11,11 @@ namespace ReviewSiteProject.Models
     {
         [Key]
         public int ReviewID { get; set; }
+        [Display(Name ="Product")]
         public string Title { get; set; }
+        [Display(Name ="Review")]
         public string Content { get; set; }
+        [Display(Name ="Date")]
         public string PublishDate { get; set; }
 
         [ForeignKey("Category")]
