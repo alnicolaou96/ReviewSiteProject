@@ -1,12 +1,12 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background-image: url('../angry-annoyed-cafe-52608.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:rgba(0, 232, 104,0.25);
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +21,44 @@ input,
 select,
 textarea {
     max-width: 280px;
+
+/*Decorating the HomePage using grid*/
 }
+#container{
+    display:grid;
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(15,1fr);
+    grid-template-rows:repeat(10,50px);
+}
+#nav{
+    grid-column:span 15;
+    background-color:rgb(0, 232, 104);
+}
+    #nav ul {
+        list-style: none;
+        display: flex;    
+    }
+        #nav ul li {
+            flex-basis: 10%;
+            height:50px;
+            text-align:center;
+        }
+            #nav ul li a {
+                text-decoration: none;
+                color: rgb(194, 255, 222);
+                font-size: 30px;
+                padding:8px;
+            }
+            #nav ul li a:hover {
+                background-color:rgb(0, 146, 65);
+                border-radius:5px;
+            }
+            #nav ul li a:active{
+                color:rgb(73, 49, 0);
+                background-color:rgb(242, 186, 71)
+            }
+                #name {
+                    grid-column: span 15;
+                }
+
