@@ -100,23 +100,28 @@ textarea {
     background-color:rgba(242, 186, 71,0.5);
 }
 /*Setting up grid and margins*/
+/*styling for the first container*/
 .con {
     display: grid;
     grid-template-rows: 50px;
-    grid-template-columns: repeat(15,1fr);
+    grid-template-columns: repeat(16,1fr);
     font-family: 'Gaegu', cursive;
 }
+/*stylings for both containers*/
 .shared {
     margin:3%;
 }
+/*styling for the second container*/
 .conTwo{
     display:grid;
-    grid-template-columns:repeat(15,1fr);
+    grid-template-columns:repeat(16,1fr);
     grid-template-rows:repeat(100,1fr);
+    grid-row-gap:20px;
+    word-break:break-word;
 }
 /*columns*/
 .column{
-    grid-column:span 3;
+    grid-column:span 4;
     display:flex;
     flex-direction:row;
     text-align:center;
@@ -141,3 +146,67 @@ textarea {
         background-color: rgba(242, 186, 71,0.5);
     }
 
+/*Styling the details page for reviews*/
+#details{
+    display:grid;
+    grid-template-columns:repeat(16,1fr);
+    grid-template-rows:repeat(2,25%);
+    grid-gap:20px;
+    margin:5%;
+    overflow:hidden;
+    word-break:break-word;
+}
+#details h4{
+    grid-column:1/span 15;
+    text-align:center;
+}
+#details .section{
+    grid-column:span 4;
+    background-color:rgba(0, 232, 104,0.5);
+    border-radius:5px;
+}
+    #details .top {
+        font-size: 25px;
+        font-family: 'Gaegu', cursive;
+        color:rgb(194, 255, 222);
+    }
+    #details .bottom{
+        font-size:15px;
+        color:rgb(1, 31, 15);
+        text-align:center;
+        font-weight:bold;
+    }
+    #details .image {
+        height: 250px;
+        background-image: url('../angry-annoyed-cafe-52608.jpg');
+        background-repeat:no-repeat;
+        background-size:cover;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+    }
+/*changginf the edit detail button styles for details*/
+#editDetails a{
+    color:rgb(73, 49, 0);
+    background-color:rgba(242, 186, 71,0.5);
+    padding:15px;
+    text-decoration:none;
+    border-radius:5px;
+    margin-left:3%;
+}
+    #editDetails a:hover {
+        color:rgb(1, 31, 15);
+        background-color:rgb(194, 255, 222);
+    }
+/*changginf the edit detail button styles for reviews*/
+#reviewEdit a {
+    color: rgb(73, 49, 0);
+    background-color: rgba(242, 186, 71,0.5);
+    padding: 15px;
+    text-decoration: none;
+    margin-left: 3%;
+}
+
+    #reviewEdit a:hover {
+        color: rgb(1, 31, 15);
+        background-color: rgb(194, 255, 222);
+    }

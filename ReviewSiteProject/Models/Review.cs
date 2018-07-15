@@ -17,9 +17,10 @@ namespace ReviewSiteProject.Models
         public string Content { get; set; }
         [Display(Name ="Date")]
         public string PublishDate { get; set; }
-
+        //data for the review
         [ForeignKey("Category")]
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
+        //retrieves data from the categories 
     }
 }

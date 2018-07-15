@@ -6,45 +6,34 @@
 
 <h2>Details</h2>
 
-<div>
+<div id="details">
     <h4>Review</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.Brand)
-        </dt>
+    <div class="section">
+        <div class="image"></div>
+        <div class="top">@Html.DisplayNameFor(model => model.Category.Brand)</div>
+        <div class="bottom">@Html.DisplayFor(model => model.Category.Brand)</div>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.Brand)
-        </dd>
+        <div class="section">
+            <div class="image"></div>
+            <div class="top">@Html.DisplayNameFor(model => model.Title)</div>
+            <div class="bottom">@Html.DisplayFor(model => model.Title)</div>                        
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+        <div class="section">
+            <div class="image"></div>
+            <div class="top">@Html.DisplayNameFor(model => model.Content)</div>
+            <div class="bottom">@Html.DisplayFor(model => model.Content)</div>           
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PublishDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PublishDate)
-        </dd>
-
-    </dl>
+        <div class="section">
+            <div class="image"></div>
+            <div class="top">@Html.DisplayNameFor(model => model.PublishDate)</div>
+            <div class="bottom">@Html.DisplayFor(model => model.PublishDate)</div>
+        </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+<p id="editDetails">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID })
     @Html.ActionLink("Back to List", "Index")
 </p>
